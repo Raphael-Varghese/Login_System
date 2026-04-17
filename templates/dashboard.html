@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4">Welcome, {{ user.username }}{% if user.is_admin %} (Admin){% endif %}</h2>
+
+<div class="row g-4">
+    <div class="col-md-4">
+        <div class="card shadow-sm p-4">
+            <h5><i class="bi bi-chat-dots"></i> Messages</h5>
+            <p class="text-muted">Send and receive messages.</p>
+            <a href="{{ url_for('messages') }}" class="btn btn-primary w-100">Open Messages</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm p-4">
+            <h5><i class="bi bi-list-check"></i> Tasks</h5>
+            <p class="text-muted">View and complete your tasks.</p>
+            <a href="{{ url_for('tasks') }}" class="btn btn-success w-100">Open Tasks</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card shadow-sm p-4">
+            <h5><i class="bi bi-code-square"></i> Consoles</h5>
+            <p class="text-muted">Python and terminal consoles.</p>
+            <a href="{{ url_for('user_python_console') }}" class="btn btn-dark w-100 mb-2">User Python</a>
+            <a href="{{ url_for('user_terminal') }}" class="btn btn-secondary w-100">User Terminal</a>
+        </div>
+    </div>
+</div>
+{% endblock %}

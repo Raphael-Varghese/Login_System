@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4 text-center">Register</h2>
+
+<form method="post" class="card p-4 shadow-sm" style="max-width: 450px; margin:auto;">
+    <div class="mb-3">
+        <label class="form-label">Username</label>
+        <input name="username" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label">Password</label>
+        <input type="password" name="password" class="form-control">
+    </div>
+
+    <button class="btn btn-success w-100">Register</button>
+</form>
+{% endblock %}

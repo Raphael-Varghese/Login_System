@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4"><i class="bi bi-terminal"></i> Admin Python Console</h2>
+
+<div class="card p-4 shadow-sm">
+    <form method="post">
+        <textarea name="code" class="form-control" rows="8" placeholder="Python code here..."></textarea>
+        <button class="btn btn-danger mt-3 w-100">Run Python</button>
+    </form>
+</div>
+
+{% if output %}
+<div class="card p-4 shadow-sm mt-4 bg-dark text-white">
+    <h5>Output</h5>
+    <pre>{{ output }}</pre>
+</div>
+{% endif %}
+{% endblock %}

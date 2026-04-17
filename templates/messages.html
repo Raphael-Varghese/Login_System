@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="mb-4"><i class="bi bi-chat-dots"></i> Messages</h2>
+
+<div class="card shadow-sm p-4 mb-4">
+    <h5>Send a Message</h5>
+    <form method="post">
+        <div class="mb-3">
+            <label class="form-label">To</label>
+            <select name="receiver_id" class="form-select">
+                {% for u in users %}
+                    {% if u.id != user.id %}
+                        <option value="{{ u.id }}">{{ u.username }}{% if u.is_admin %} (Admin){% endif %}</option>
+                    {% endif %}
+                {% endfor %}
+            </select>
+        </div>
+
+        <div class="mb-3">
+            <label class="form-label">Message</label>
+            <textarea name="content" class="form-control" rows="3"></textarea>
+        </div>
+
+        <button class="btn btn-primary w-100">Send</button>
+    </form>
+</div>
+
+<div class="card shadow-sm p-4">
+    <h5 class="mb-3">Message History</h5>
+
+    <table class="table table-hover">
+        <thead class="table-light">
+            <tr>
+                <th>Time</th>
+                <th>From</th>
+                <th>To</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for m in messages %}
+            <tr>
+                <td>{{ m.timestamp }}</td>
+                <td>{{ m.sender.username }}</td>
+                <td>{{ m.receiver.username }}</td>
+                <td>{{ m.content }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
