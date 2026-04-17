@@ -75,8 +75,9 @@ Admins get access to full system‑level tools:
 ## 📁 Project Structure
 
 ```
-your_project/
+Login_System/
 ├─ app.py
+├─ setup.py
 └─ templates/
    ├─ base.html
    ├─ login.html
@@ -94,25 +95,17 @@ your_project/
 
 ---
 
-## 🛠️ Installation & Setup
+## Setup
 
-### 1. Install dependencies
+### For your ease, a setup script is included.
 ```
-pip install flask flask_sqlalchemy werkzeug
+python setup.py
 ```
-
-### 2. Run the app
+### Admin credentials are 
 ```
-python app.py
+USERNAME: admin
+PASSWORD: admin_security08642
 ```
-
-### 3. Open in browser  
-```
-http://127.0.0.1:5000/
-```
-
-### 4. Register the first user  
-The **first account** becomes **Admin automatically**.
 
 ---
 
