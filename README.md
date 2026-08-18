@@ -132,4 +132,4 @@ Do **NOT** deploy this application publicly.
 - Dark mode  
 - Analytics dashboard  
 
-## IF USING THIS PROJECT FOR ANY PRODUCTION PURPOSES, PLEASE MAKE SURE TO EMAIL ME FOR THE ADMIN PASSWORD AT (raphaelcvarghese@gmail.com)[mailto:raphaelcvarghese@gmail.com]. ALSO, BE SURE TO CREDIT ME AT (Raphael Varghese)[https://github.com/Raphael-Varghese]
+## IF USING THIS PROJECT FOR ANY PRODUCTION PURPOSES, PLEASE MAKE SURE TO EMAIL ME FOR THE ADMIN PASSWORD AT [raphaelcvarghese@gmail.com](mailto:raphaelcvarghese@gmail.com). ALSO, BE SURE TO CREDIT ME AT [Raphael Varghese](https://github.com/Raphael-Varghese)
